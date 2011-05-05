@@ -14,7 +14,7 @@ alias __set_git_ps1='export PS1="\[$(tput setaf 1)\]$(__git_branch)\[$(tput seta
 alias __set_normal_ps1='PS1="\[$(tput setaf 6)\]\u@\h:\W\$ \[$(tput sgr0)\]"'
 
 __select_ps1(){
-  [ -d .git ] && __set_git_ps1 || __set_normal_ps1
+  [ -n "`__git_branch`" ] && __set_git_ps1 || __set_normal_ps1
 };
 
 __kill_mongodb(){
