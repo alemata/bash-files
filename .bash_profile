@@ -1,6 +1,5 @@
-# Git completion script
-if [ -f /opt/local/etc/bash_completion.d/git-completion.bash ]; then
-  . /opt/local/etc/bash_completion.d/git-completion.bash
+if [ -f $HOME/.bash/.bash_completion ]; then
+  . $HOME/.bash/.bash_completion
 fi
 
 if [ -f $HOME/.bash/.bash_functions ]; then
@@ -12,9 +11,6 @@ if [ -f $HOME/.bash/.bash_aliases ]; then
 fi
 
 export EDITOR='vim'
-
-# Rake completion script
-#complete -C /opt/local/etc/bash_completion.d/rake-completion.rb -o default rake
 
 # MacPorts Installer addition on 2009-12-22_at_15:35:47: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
