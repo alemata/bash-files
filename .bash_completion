@@ -6,7 +6,9 @@ if [ -f /opt/local/etc/bash_completion.d/git-completion.bash ]; then
   . /opt/local/etc/bash_completion.d/git-completion.bash
 fi
 
-complete -o default -o nospace -W "$(grep host < ~/.ssh/config | cut -d ' ' -f2)" scp ssh
+# Autocomplete
+# complete -o default -o nospace -W "$(grep host < ~/.ssh/config | cut -d ' ' -f2)" scp ssh
+complete -W "$(grep host < ~/.ssh/config | cut -d ' ' -f2)" scp ssh
 
 # Rake completion script
 #complete -C /opt/local/etc/bash_completion.d/rake-completion.rb -o default rake
