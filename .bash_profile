@@ -11,24 +11,27 @@ if [ -f $HOME/.bash/.bash_aliases ]; then
 fi
 
 export EDITOR='vim'
+export BUNDLER_EDITOR="mate"
 
-# MacPorts Installer addition on 2009-12-22_at_15:35:47: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
+# Rake completion script
+#complete -C /opt/local/etc/bash_completion.d/rake-completion.rb -o default rake
+
+# Ctags path presedence
+export PATH="/usr/local/bin:$PATH"
 # MySQL path addition
 export PATH="$PATH:/usr/local/mysql/bin"
 #MongoDB path addition
 export PATH="$PATH:/usr/local/mongodb/bin"
+# For Android
+export PATH="$PATH:/Developer/Android/sdk/tools:/Developer/Android/sdk/platform-tools"
 
 export CLICOLOR=1 # for terminal colors
 export GREP_OPTIONS='--color=auto --line-number'
 
-export BUNDLER_EDITOR="mate"
-
 # History
 shopt -s histappend
 export HISTCONTROL=ignoredups
-export HISTIGNORE="pwd:ls:ll:la:gitx:git st:pp:st:ss:pull:push:git pull:prune:git ss:git br:git sl"
+export HISTIGNORE="pwd:ls:ll:la:gitx:git st:pp:st:ss:pull:push:git pull:prune:git ss:git br:git sl:mvim"
 export HISTTIMEFORMAT='%F @ %T - '
 
 # RVM

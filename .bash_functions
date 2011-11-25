@@ -18,9 +18,17 @@ __select_ps1(){
 };
 
 __kill_mongodb(){
-  if [ -s /opt/local/var/mongodb/data/mongod.lock ]; then
-    kill `cat /opt/local/var/mongodb/data/mongod.lock`
+  if [ -s /var/db/mongodb/data/mongod.lock ]; then
+    kill `cat /var/db/mongodb/data/mongod.lock`
   fi
+};
+
+__update_macvim(){
+  cd ~/apps/macvim
+  git pull
+  ./configure --with-features=huge --enable-pythoninterp --enable-rubyinterp --enable-perlinterp --with-macarchs=x86_64 --enable-gui-macvim
+  make
+  open src/MacVim/build/Release/
 };
 
 __git_track_branch(){
@@ -30,4 +38,4 @@ __git_track_branch(){
     `git config branch.$branch.merge refs/heads/$branch`
     `git config branch.$branch.rebase true`
   fi
-}
+};

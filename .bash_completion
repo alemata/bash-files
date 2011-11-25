@@ -13,3 +13,13 @@ complete -W "$(grep host < ~/.ssh/config | cut -d ' ' -f2)" scp ssh
 # Rake completion script
 #complete -C /opt/local/etc/bash_completion.d/rake-completion.rb -o default rake
 
+# Git & man completion script
+if [ -d `brew --prefix`/etc/bash_completion.d ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-completion.bash \
+    `brew --prefix`/etc/bash_completion.d/man
+fi
+
+# Brew completion script
+if [ -f `brew --prefix`/Library/Contributions/brew_bash_completion.sh ]; then
+  . `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+fi
