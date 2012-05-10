@@ -26,7 +26,12 @@ alias mongo?="cat /var/db/mongodb/data/mongod.lock"
 alias killmongo="__kill_mongodb"
 
 # redis
-alias redis_start="redis-server config/redis/development.conf"
+#alias redis_start="redis-server config/redis/development.conf"
+alias redis_start="redis-server /usr/local/etc/redis.conf"
+
+# postgres
+alias pg_start="pg_ctl -D /var/db/postgres/hf -l /var/db/postgres/hf/server.log start"
+alias pg_stop="pg_ctl -D /var/db/postgres/hf stop -s -m fast"
 
 # Rails
 alias et="RAILS_ENV=test"
@@ -35,6 +40,7 @@ alias srv="rails s"
 alias migrate="rake db:migrate && rake db:migrate RAILS_ENV=test"
 alias rreset="rake db:reset && rake db:reset RAILS_ENV=test"
 alias drop_and_create="rake db:drop:all; rake db:create:all; cp db/schema-* db/schema.rb; rake db:schema:load; rake db:schema:load RAILS_ENV=test;"
+alias be="bundle exec"
 
 # git
 alias undo_commit="git reset --soft HEAD^"
@@ -43,22 +49,37 @@ alias push="git push"
 alias st="git st"
 alias oo="__git_stash_show"
 alias prune="git fetch --prune"
+alias track="__git_track_branch"
 ### End of Aliases for developer ###
 
 ### Aliases by project ###
 
-##  Deviget  ##
-alias pp='cd ~/grid/poketypoke'
-alias ss='cd ~/grid/simulscribe2.0'
-alias pt='cd ~/grid/phonetag2'
-alias ss1='cd ~/grid/_ss1'
-alias sm='cd ~/grid/SMRTouch'
-alias api='cd ~/grid/SMRTouch-API'
-alias bj="cd ~/grid/billing_jean"
-alias ba='cd ~/grid/Ballroom-Blitz/assets/www/app'
-alias iba='ant install -f ~/grid/Ballroom-Blitz/build.xml'
+## Citrusbyte ##
+CITRUSBYTE_HOME="~/citrusbyte"
+alias api="cd $CITRUSBYTE_HOME/att-innovate/api"
+alias mh="cd $CITRUSBYTE_HOME/att-innovate/mhealth"
+alias hf="cd $CITRUSBYTE_HOME/att-innovate/HealthyFamily"
+alias api_start="api; bundle exec shotgun -E development -p 9292 config.ru"
+alias mhealth_start="mh; bundle exec shotgun -E development -p 9393 config.ru"
 
-alias load_aws='source ~/grid/.bash_aws_vars'
+
+##  Deviget  ##
+DEVIGET_HOME="~/deviget"
+alias pp="cd $DEVIGET_HOME/poketypoke"
+alias ss2="cd $DEVIGET_HOME/simulscribe2.0"
+alias pt="cd $DEVIGET_HOME/phonetag2"
+alias ss1="cd $DEVIGET_HOME/_ss1"
+alias sm="cd $DEVIGET_HOME/SMRTouch"
+#alias api="cd $DEVIGET_HOME/smrtouch-api"
+alias bj="cd $DEVIGET_HOME/billing_jean"
+alias ba="cd $DEVIGET_HOME/Ballroom-Blitz/assets/www/app"
+alias iba="ant install -f $DEVIGET_HOME/Ballroom-Blitz/build.xml"
+alias load_aws="source $DEVIGET_HOME/.bash_aws_vars"
+
+## Quov.is ##
+QUOVIS_HOME="~/quov.is"
+alias ei="cd $QUOVIS_HOME/ei-comply"
+alias ss="cd $QUOVIS_HOME/smart-safety"
 
 ## Android ##
 alias syncronize_android="rsync --delete -av Macarena.local:/Developer/Android/* /Developer/Android/."

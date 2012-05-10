@@ -1,3 +1,7 @@
+# Homebrew configuration
+export HOMEBREW_PREFIX='/usr/local'
+export PATH=$PATH:/usr/local/sbin
+
 if [ -f $HOME/.bash/.bash_completion ]; then
   . $HOME/.bash/.bash_completion
 fi
@@ -13,25 +17,29 @@ fi
 export EDITOR='vim'
 export BUNDLER_EDITOR="mate"
 
-# Rake completion script
-#complete -C /opt/local/etc/bash_completion.d/rake-completion.rb -o default rake
-
 # Ctags path presedence
 export PATH="/usr/local/bin:$PATH"
 # MySQL path addition
 export PATH="$PATH:/usr/local/mysql/bin"
+export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 #MongoDB path addition
 export PATH="$PATH:/usr/local/mongodb/bin"
 # For Android
 export PATH="$PATH:/Developer/Android/sdk/tools:/Developer/Android/sdk/platform-tools"
+# Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin
+# MHEALTH Required when running tests
+ulimit -n 2048
+export RIAK_BIN_DIR=/usr/local/Cellar/riak/1.1.1x86_64/libexec/bin
 
 export CLICOLOR=1 # for terminal colors
-export GREP_OPTIONS='--color=auto --line-number'
+export GREP_OPTIONS='--color=auto'
+
 
 # History
 shopt -s histappend
 export HISTCONTROL=ignoredups
-export HISTIGNORE="pwd:ls:ll:la:gitx:git st:pp:st:ss:pull:push:git pull:prune:git ss:git br:git sl:mvim"
+export HISTIGNORE="pwd:ls:ll:la:gitx:git st:pp:st:ss:pull:push:git pull:prune:git ss:git br:git sl:mvim:mh:ei"
 export HISTTIMEFORMAT='%F @ %T - '
 
 # RVM

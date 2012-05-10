@@ -1,25 +1,18 @@
 # Completion for sudo command
 complete -c -f command sudo
 
-# Git completion script
-if [ -f /opt/local/etc/bash_completion.d/git-completion.bash ]; then
-  . /opt/local/etc/bash_completion.d/git-completion.bash
-fi
-
-# Autocomplete
-# complete -o default -o nospace -W "$(grep host < ~/.ssh/config | cut -d ' ' -f2)" scp ssh
-complete -W "$(grep host < ~/.ssh/config | cut -d ' ' -f2)" scp ssh
-
-# Rake completion script
-#complete -C /opt/local/etc/bash_completion.d/rake-completion.rb -o default rake
+# Autocomplete - without scp because directory/file autocomplete is better
+# complete -o default -o nospace -W "$(grep host < ~/.ssh/config | cut -d ' ' -f2)" ssh
+complete -W "$(grep host < ~/.ssh/config | cut -d ' ' -f2)" ssh
 
 # Git & man completion script
-if [ -d `brew --prefix`/etc/bash_completion.d ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-completion.bash \
-    `brew --prefix`/etc/bash_completion.d/man
+if [ -d $HOMEBREW_PREFIX/etc/bash_completion.d ]; then
+  . $HOMEBREW_PREFIX/etc/bash_completion.d/git-completion.bash \
+    $HOMEBREW_PREFIX/etc/bash_completion.d/man
+  #. $HOMEBREW_PREFIX/etc/bash_completion.d/rake
 fi
 
 # Brew completion script
-if [ -f `brew --prefix`/Library/Contributions/brew_bash_completion.sh ]; then
-  . `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+if [ -f $HOMEBREW_PREFIX/homebrew/Library/Contributions/brew_bash_completion.sh ]; then
+  . $HOMEBREW_PREFIX/homebrew/Library/Contributions/brew_bash_completion.sh
 fi
