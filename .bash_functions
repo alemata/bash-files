@@ -26,12 +26,8 @@ __kill_mongodb(){
 __git_track_branch(){
   local branch=`__git_branch`
   if [ -n "$branch" ]; then
-    local file="`__gitdir`/config"
-    if [ -n "`grep $branch $file`" ]; then
-      echo "'$branch' it's already defined"
-    else
-      echo -e "[branch \"$branch\"]\n\tremote = origin\n\tmerge = refs/heads/$branch\n\trebase = true" >> $file
-      echo "'$branch' remote-tracking configured "
-    fi
+    `git config branch.$branch.remote origin`
+    `git config branch.$branch.merge refs/heads/$branch`
+    `git config branch.$branch.rebase true`
   fi
 }
