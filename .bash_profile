@@ -20,17 +20,17 @@ export BUNDLER_EDITOR="mate"
 # Ctags path presedence
 export PATH="/usr/local/bin:$PATH"
 # MySQL path addition
-export PATH="$PATH:/usr/local/mysql/bin"
-export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
+#export PATH="$PATH:/usr/local/mysql/bin"
+#export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 #MongoDB path addition
 export PATH="$PATH:/usr/local/mongodb/bin"
 # For Android
-export PATH="$PATH:/Developer/Android/sdk/tools:/Developer/Android/sdk/platform-tools"
+# export PATH="$PATH:/Developer/Android/sdk/tools:/Developer/Android/sdk/platform-tools"
 # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.rvm/bin
 # MHEALTH Required when running tests
 ulimit -n 2048
-export RIAK_BIN_DIR=/usr/local/Cellar/riak/1.1.1x86_64/libexec/bin
+export RIAK_BIN_DIR=/usr/local/Cellar/riak/1.1.2-x86_64/libexec/bin/
 
 export CLICOLOR=1 # for terminal colors
 export GREP_OPTIONS='--color=auto'

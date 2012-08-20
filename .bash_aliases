@@ -60,8 +60,10 @@ alias api="cd $CITRUSBYTE_HOME/att-innovate/api"
 alias mh="cd $CITRUSBYTE_HOME/att-innovate/mhealth"
 alias hf="cd $CITRUSBYTE_HOME/att-innovate/HealthyFamily"
 alias api_start="api; bundle exec shotgun -E development -p 9292 config.ru"
+alias api_test="api; ps -eaf | grep beam | grep -v grep | awk '{print $2}' | xargs kill -9; rm -rf /tmp/.api.riak; be rake"
 alias mhealth_start="mh; bundle exec shotgun -E development -p 9393 config.ru"
-
+alias mh_test="mh; ps -eaf | grep beam | grep -v grep | awk '{print $2}' | xargs kill -9; rm -rf /tmp/.mhealth.riak; be rake"
+#alias mh_test="mh; rm -rf /tmp/.mhealth.riak; be rake"
 
 ##  Deviget  ##
 DEVIGET_HOME="~/deviget"
