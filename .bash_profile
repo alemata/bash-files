@@ -30,7 +30,7 @@ export PATH="$PATH:/usr/local/mongodb/bin"
 export PATH=$PATH:$HOME/.rvm/bin
 # MHEALTH Required when running tests
 ulimit -n 2048
-export RIAK_BIN_DIR=/usr/local/Cellar/riak/1.1.2-x86_64/libexec/bin/
+export RIAK_BIN_DIR=/usr/local/Cellar/riak/1.1.4-x86_64/libexec/bin
 
 export CLICOLOR=1 # for terminal colors
 export GREP_OPTIONS='--color=auto'
