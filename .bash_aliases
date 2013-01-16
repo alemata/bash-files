@@ -8,6 +8,8 @@ alias syncronize_varios_artistas="rsync --delete -av 192.168.0.100:Music/Vario* 
 alias syncronize_marcha="rsync --delete -av 192.168.0.100:Music/Marcha* ~/Music/"
 alias huge_files="find ~ -type f -size +100000k -exec ls -lh {} \;"
 alias wget="curl -O"
+alias grni="grep -rni"
+alias irb="pry"
 
 ### End of Aliases for shell ###
 
@@ -30,8 +32,9 @@ alias killmongo="__kill_mongodb"
 alias redis_start="redis-server /usr/local/etc/redis.conf"
 
 # postgres
-alias pg_start="pg_ctl -D /var/db/postgres/hf -l /var/db/postgres/hf/server.log start"
-alias pg_stop="pg_ctl -D /var/db/postgres/hf stop -s -m fast"
+# alias pg_start="pg_ctl -D /var/db/postgres/hf -l /var/db/postgres/hf/server.log start"
+alias pg_start="pg_ctl -D /usr/local/var/postgres -l /var/db/postgres/apihub.log start"
+alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 # Rails
 alias et="RAILS_ENV=test"
@@ -62,8 +65,8 @@ alias api_start="api; shotgun -s puma"
 alias mapi="cd $CITRUSBYTE_HOME/att-innovate/api"
 alias mh="cd $CITRUSBYTE_HOME/att-innovate/mhealth"
 alias hf="cd $CITRUSBYTE_HOME/att-innovate/HealthyFamily"
-alias mapi_start="api; bundle exec shotgun -E development -p 9292 config.ru"
-alias api_test="api; ps -eaf | grep beam | grep -v grep | awk '{print $2}' | xargs kill -9; rm -rf /tmp/.api.riak; bundel exec rake"
+alias mapi_start="mapi; bundle exec shotgun -E development -p 9292 config.ru"
+alias mapi_test="mapi; ps -eaf | grep beam | grep -v grep | awk '{print $2}' | xargs kill -9; rm -rf /tmp/.api.riak; bundle exec rake"
 alias mhealth_start="mh; bundle exec shotgun -E development -p 9393 config.ru"
 alias mh_test="mh; ps -eaf | grep beam | grep -v grep | awk '{print $2}' | xargs kill -9; rm -rf /tmp/.mhealth.riak; bundle exec rake"
 

@@ -39,7 +39,7 @@ export GREP_OPTIONS='--color=auto'
 # History
 shopt -s histappend
 export HISTCONTROL=ignoredups
-export HISTIGNORE="pwd:ls:ll:la:gitx:git st:pp:st:ss:pull:push:git pull:prune:git ss:git br:git sl:mvim:mh:ei"
+export HISTIGNORE="pwd:ls:ll:la:gitx:git st:pp:st:ss:pull:push:git pull:prune:git ss:git br:git sl:mvim:mh:git log:git diff:api:mapi"
 export HISTTIMEFORMAT='%F @ %T - '
 
 # RVM
