@@ -2,16 +2,16 @@
 export HOMEBREW_PREFIX='/usr/local'
 export PATH=$PATH:/usr/local/sbin
 
-if [ -f $HOME/.bash/.bash_completion ]; then
-  . $HOME/.bash/.bash_completion
+if [ -f $HOME/.bash/bash_completion ]; then
+  . $HOME/.bash/bash_completion
 fi
 
-if [ -f $HOME/.bash/.bash_functions ]; then
-  . $HOME/.bash/.bash_functions
+if [ -f $HOME/.bash/bash_functions ]; then
+  . $HOME/.bash/bash_functions
 fi
 
-if [ -f $HOME/.bash/.bash_aliases ]; then
-  . $HOME/.bash/.bash_aliases
+if [ -f $HOME/.bash/bash_aliases ]; then
+  . $HOME/.bash/bash_aliases
 fi
 
 export EDITOR='vim'
@@ -24,8 +24,7 @@ export PATH="/usr/local/bin:$PATH"
 #export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 #MongoDB path addition
 export PATH="$PATH:/usr/local/mongodb/bin"
-# For Android
-# export PATH="$PATH:/Developer/Android/sdk/tools:/Developer/Android/sdk/platform-tools"
+
 # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.rvm/bin
 # MHEALTH Required when running tests

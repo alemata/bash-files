@@ -9,5 +9,5 @@ Clone this repository into your home folder
 
 Replace your old `.bashrc` or `.bash_profile` content with
 
-    `source ~/.bash/*`
+    `source ~/.bash/bash_profile`
 
