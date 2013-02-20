@@ -2,16 +2,16 @@
 export HOMEBREW_PREFIX='/usr/local'
 export PATH=$PATH:/usr/local/sbin
 
-if [ -f $HOME/.bash/bash_completion ]; then
-  . $HOME/.bash/bash_completion
+if [ -f $HOME/.bash/completion ]; then
+  . $HOME/.bash/completion
 fi
 
-if [ -f $HOME/.bash/bash_functions ]; then
-  . $HOME/.bash/bash_functions
+if [ -f $HOME/.bash/functions ]; then
+  . $HOME/.bash/functions
 fi
 
-if [ -f $HOME/.bash/bash_aliases ]; then
-  . $HOME/.bash/bash_aliases
+if [ -f $HOME/.bash/aliases ]; then
+  . $HOME/.bash/aliases
 fi
 
 export EDITOR='vim'
@@ -23,13 +23,13 @@ export PATH="/usr/local/bin:$PATH"
 #export PATH="$PATH:/usr/local/mysql/bin"
 #export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 #MongoDB path addition
-export PATH="$PATH:/usr/local/mongodb/bin"
+#export PATH="$PATH:/usr/local/mongodb/bin"
 
 # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.rvm/bin
 # MHEALTH Required when running tests
 ulimit -n 2048
-export RIAK_BIN_DIR=/usr/local/Cellar/riak/1.2.0-x86_64/libexec/bin
+export RIAK_BIN_DIR=/usr/local/Cellar/riak/1.2.1-x86_64/libexec/bin
 
 export CLICOLOR=1 # for terminal colors
 export GREP_OPTIONS='--color=auto'
