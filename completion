@@ -9,10 +9,9 @@ complete -W "$(grep host < ~/.ssh/config | cut -d ' ' -f2)" ssh
 if [ -d $HOMEBREW_PREFIX/etc/bash_completion.d ]; then
   . $HOMEBREW_PREFIX/etc/bash_completion.d/git-completion.bash \
     $HOMEBREW_PREFIX/etc/bash_completion.d/man
-  #. $HOMEBREW_PREFIX/etc/bash_completion.d/rake
 fi
 
 # Brew completion script
-if [ -f $HOMEBREW_PREFIX/homebrew/Library/Contributions/brew_bash_completion.sh ]; then
-  . $HOMEBREW_PREFIX/homebrew/Library/Contributions/brew_bash_completion.sh
+if [ -f $HOMEBREW_PREFIX/Library/Contributions/brew_bash_completion.sh ]; then
+  . $HOMEBREW_PREFIX/Library/Contributions/brew_bash_completion.sh
 fi
