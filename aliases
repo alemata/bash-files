@@ -29,7 +29,6 @@ alias mongo?="cat /var/db/mongodb/data/mongod.lock"
 alias killmongo="__kill_mongodb"
 
 # redis
-#alias redis_start="redis-server config/redis/development.conf"
 alias redis_start="redis-server /usr/local/etc/redis.conf"
 
 # postgres
@@ -48,8 +47,8 @@ alias be="bundle exec"
 # git
 alias undo_commit="git reset --soft HEAD^"
 alias pull="git pull"
-alias push="git push"
-alias st="git st"
+alias push="git push -u origin"
+alias st="git status -s"
 alias oo="__git_stash_show"
 alias prune="git fetch --prune"
 alias track="__git_track_branch"
