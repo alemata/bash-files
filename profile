@@ -27,9 +27,13 @@ export PATH="/usr/local/bin:$PATH"
 
 # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.rvm/bin
+# MHEALTH Required when running tests
+ulimit -n 2048
+export RIAK_BIN_DIR=/usr/local/Cellar/riak/1.2.1-x86_64/libexec/bin
 
 export CLICOLOR=1 # for terminal colors
 export GREP_OPTIONS='--color=auto'
+
 
 # History
 shopt -s histappend
