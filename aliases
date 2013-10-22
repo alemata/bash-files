@@ -15,13 +15,11 @@ alias irb="pry"
 
 ### Aliases for developer ###
 alias nginx_stop="nginx -s stop"
+
 # mySQL configuration
-alias my='sudo /Library/StartupItems/MySQLCOM/MySQLCOM'
-alias mysql='/usr/local/mysql/bin/mysql -u root -p'
-alias mystart='my start'
-alias mydown='my stop'
-#alias mystart='sudo launchctl load -w /Library/StartupItems/com.mysql.mysqld.plist'
-#alias mydown='sudo launchctl unload -w /Library/StartupItems/com.mysql.mysqld.plist'
+alias mysql='mysql -uroot'
+alias mystart='mysql.server start'
+alias mydown='mysql.server stop'
 
 # mongoDB configuration
 alias mongod="mongod -f /etc/mongod.conf &"
@@ -37,7 +35,6 @@ alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 # Rails
 alias et="RAILS_ENV=test"
-alias eit="RAILS_ENV=integration_test"
 alias srv="rails s"
 alias migrate="rake db:migrate && rake db:migrate RAILS_ENV=test"
 alias rreset="rake db:reset && rake db:reset RAILS_ENV=test"
@@ -70,3 +67,7 @@ alias mh_test="mh; ps -eaf | grep beam | grep -v grep | awk '{print $2}' | xargs
 ## Own projects ##
 PROJECTS="~/Code"
 alias ork="cd $PROJECTS/ork"
+
+## Pulpou  ##
+PULPOU_HOME="~/Code/pulpou"
+alias ppb="cd $PULPOU_HOME/pulpou-back"
