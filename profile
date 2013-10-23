@@ -29,7 +29,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH=$PATH:$HOME/.rvm/bin
 # MHEALTH Required when running tests
 ulimit -n 4096
-export RIAK_BIN_DIR=/usr/local/Cellar/riak/1.4.1/libexec/bin
+export RIAK_BIN_DIR=/usr/local/Cellar/riak/1.4.2/libexec/bin
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 export CLICOLOR=1 # for terminal colors
