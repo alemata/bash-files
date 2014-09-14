@@ -29,8 +29,8 @@ export PATH="/usr/local/bin:$PATH"
 # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.rvm/bin
 # MHEALTH Required when running tests
-ulimit -n 4096
-export RIAK_BIN_DIR=/usr/local/Cellar/riak/1.4.7/libexec/bin
+ulimit -n 65536
+export RIAK_BIN_DIR=/usr/local/Cellar/riak/2.0.0/libexec/bin
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 export CLICOLOR=1 # for terminal colors
