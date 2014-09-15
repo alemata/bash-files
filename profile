@@ -46,5 +46,8 @@ export HISTTIMEFORMAT='%F @ %T - '
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# ls colors
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
 # Pretty PS1
 PROMPT_COMMAND=__select_ps1
