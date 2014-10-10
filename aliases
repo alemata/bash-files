@@ -8,7 +8,7 @@ alias syncronize_varios_artistas="rsync --delete -av 192.168.0.100:Music/Vario* 
 alias syncronize_marcha="rsync --delete -av 192.168.0.100:Music/Marcha* ~/Music/"
 alias huge_files="find ~ -type f -size +100000k -exec ls -lh {} \;"
 alias wget="curl -O"
-alias grni="grep -rni"
+alias grni="grep -rni --exclude-dir='.git'"
 alias irb="pry"
 
 ### End of Aliases for shell ###
