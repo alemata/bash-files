@@ -24,7 +24,6 @@ export PATH="/usr/local/bin:$PATH"
 # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.rvm/bin
 export RIAK_BIN_DIR=/usr/local/Cellar/riak/2.0.0/libexec/bin
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 export CLICOLOR=1 # for terminal colors
 export GREP_OPTIONS='--color=auto'
