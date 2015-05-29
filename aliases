@@ -2,10 +2,7 @@
 alias ll='ls -lh'
 alias la='ls -AF'
 alias ..='cd ..'
-alias ..2='..;..'
-alias ..3='..2;..'
-alias syncronize_varios_artistas="rsync --delete -av 192.168.0.100:Music/Vario* ~/Music/"
-alias syncronize_marcha="rsync --delete -av 192.168.0.100:Music/Marcha* ~/Music/"
+alias ..2='cd ../..'
 alias huge_files="find ~ -type f -size +100000k -exec ls -lh {} \;"
 alias wget="curl -O"
 alias grni="grep -rni --exclude-dir='.git'"
@@ -56,16 +53,12 @@ alias track="__git_track_branch"
 ## Citrusbyte ##
 CITRUSBYTE_HOME="~/citrusbyte"
 alias api="cd $CITRUSBYTE_HOME/apihub"
-alias api_start="api; shotgun -s puma"
-alias mapi="cd $CITRUSBYTE_HOME/api-server"
-alias mh="cd $CITRUSBYTE_HOME/mhealth"
-alias mapi_start="mapi; rackup -p 9292 config.ru"
-alias mapi_test="mapi; ps -eaf | grep beam | grep -v grep | awk '{print $2}' | xargs kill -9; rm -rf /tmp/.api.riak; bundle exec rake"
-alias mh_start="mh; rackup -p 9393 config.ru"
-alias mh_test="mh; ps -eaf | grep beam | grep -v grep | awk '{print $2}' | xargs kill -9; rm -rf /tmp/.mhealth.riak; bundle exec rake"
-alias so="cd $CITRUSBYTE_HOME/soul"
-alias sc="cd $CITRUSBYTE_HOME/social"
-alias learn="cd $CITRUSBYTE_HOME/learning-api"
+alias mapi="cd $CITRUSBYTE_HOME/att-innovate/api-server"
+alias mh="cd $CITRUSBYTE_HOME/att-innovate/mhealth"
+alias so="cd $CITRUSBYTE_HOME/fwk/soul"
+alias sc="cd $CITRUSBYTE_HOME/fwk/social"
+alias learn="cd $CITRUSBYTE_HOME/fwk/learning-api"
+alias compass="cd $CITRUSBYTE_HOME/bridgetree-compass"
 
 ## Own projects ##
 PROJECTS="~/Code"
@@ -74,3 +67,7 @@ alias ork="cd $PROJECTS/ork"
 ## Pulpou  ##
 PULPOU_HOME="~/Code/pulpou"
 alias ppb="cd $PULPOU_HOME/pulpou"
+
+## Facultad ##
+alias plp="cd ~/Dropbox/Facultad/Paradigmas\ de\ Lenguajes\ de\ Programacion"
+alias tl="cd ~/Dropbox/Facultad/Teoria\ de\ Lenguajes"
