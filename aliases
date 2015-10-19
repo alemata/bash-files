@@ -5,7 +5,7 @@ alias ..='cd ..'
 alias ..2='cd ../..'
 alias huge_files="find ~ -type f -size +100000k -exec ls -lh {} \;"
 alias wget="curl -O"
-alias grni="grep -rni --exclude-dir='.git'"
+alias grni="grep -rni --exclude-dir='.git' --exclude-dir='node_modules'"
 alias irb="pry"
 alias es6="traceur --out build.js --script "
 
