@@ -39,4 +39,4 @@ export HISTTIMEFORMAT='%F @ %T - '
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Pretty PS1
-PROMPT_COMMAND=__select_ps1
+PROMPT_COMMAND=__after_change_directory
