@@ -20,11 +20,6 @@ export ATOM_PATH="/Users/emancu/Applications/Atom.app"
 
 # Ctags path presedence
 export PATH="/usr/local/bin:$PATH"
-# MySQL path addition
-#export PATH="$PATH:/usr/local/mysql/bin"
-
-# Add RVM to PATH for scripting
-export PATH=$PATH:$HOME/.rvm/bin
 
 export CLICOLOR=1 # for terminal colors
 export GREP_OPTIONS='--color=auto'
@@ -32,7 +27,7 @@ export GREP_OPTIONS='--color=auto'
 # History
 shopt -s histappend
 export HISTCONTROL=ignoredups
-export HISTIGNORE="pwd:ls:ll:la:gitx:git st:pp:st:ss:pull:push:git pull:prune:git ss:git br:git sl:mvim:mh:git log:git diff:api:mapi"
+export HISTIGNORE="pwd:ls:ll:la:gitx:git st:pp:st:ss:pull:push:git pull:prune:git ss:git br:git sl:mvim:mh:git log:git diff:api:mapi:learn:rubocop -D: rubocop"
 export HISTTIMEFORMAT='%F @ %T - '
 
 # RVM
@@ -42,4 +37,4 @@ export HISTTIMEFORMAT='%F @ %T - '
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 # Pretty PS1
-PROMPT_COMMAND=__select_ps1
+PROMPT_COMMAND=__after_change_directory

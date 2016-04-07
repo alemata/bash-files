@@ -1,4 +1,9 @@
 ### Functions for shell ###
+__after_change_directory(){
+  __setup_directory;
+  __select_ps1;
+};
+
 __git_stash_show(){
   git stash show stash@{$1} -p
 };
@@ -23,14 +28,6 @@ __kill_mongodb(){
   fi
 };
 
-__update_macvim(){
-  cd ~/Code/macvim
-  git pull
-  ./configure --with-features=huge --enable-pythoninterp --enable-rubyinterp --enable-perlinterp --with-macarchs=x86_64 --enable-gui-macvim
-  make
-  open src/MacVim/build/Release/
-};
-
 __git_track_branch(){
   local branch=`__git_branch`
   if [ -n "$branch" ]; then
@@ -38,4 +35,8 @@ __git_track_branch(){
     `git config branch.$branch.merge refs/heads/$branch`
     `git config branch.$branch.rebase true`
   fi
+};
+
+__setup_directory(){
+  [ -e .setup ] && source ./.setup
 };
